@@ -7,8 +7,7 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Yoann Vanitou",
-            "email": "yvanitou@gmail.com"
+            "name": "Yoann Vanitou"
         },
         {
             "name": "Bruce Heller",
@@ -26,7 +25,10 @@
     },
     "autoload": {
         "psr-4": {
-            "maltyxx\\ImagesGenerator\\": "src"    
+            "Maltyxx\\ImagesGenerator\\": "src/"
         }
+    },
+    "conflict": {
+        "bheller/images-generator": "*"
     }
 }
