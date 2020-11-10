@@ -1,5 +1,5 @@
 <?php
-namespace maltyxx\ImagesGenerator;
+namespace Maltyxx\ImagesGenerator;
 
 class ImagesGeneratorTest extends \PHPUnit_Framework_TestCase
 {

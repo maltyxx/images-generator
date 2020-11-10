@@ -47,7 +47,7 @@ Use the `ImagesGeneratorProvider` class in combinaison with [Faker](https://gith
     <?php
     require __DIR__ .'/vendor/autoload.php';
     
-    use maltyxx\ImagesGenerator\ImagesGeneratorProvider;
+    use Maltyxx\ImagesGenerator\ImagesGeneratorProvider;
 
     $faker = Faker\Factory::create();
     $faker->addProvider(new ImagesGeneratorProvider($faker));
