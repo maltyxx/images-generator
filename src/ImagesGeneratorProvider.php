@@ -1,5 +1,5 @@
 <?php
-namespace bheller\ImagesGenerator;
+namespace maltyxx\ImagesGenerator;
 
 /**
  * Provider for the Faker generator

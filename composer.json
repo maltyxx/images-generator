@@ -1,11 +1,15 @@
 {
-    "name": "bheller/images-generator",
+    "name": "maltyxx/images-generator",
     "description": "Generator of placeholder images for Faker",
-    "homepage": "https://github.com/bruceheller/images-generator",
-    "version": "1.0.1",
+    "homepage": "https://github.com/maltyxx/images-generator",
+    "version": "1.0.0",
     "keywords": ["images-generator", "imagesgenerator", "faker", "fixtures", "data"],
     "license": "MIT",
     "authors": [
+        {
+            "name": "Yoann Vanitou",
+            "email": "yvanitou@gmail.com"
+        },
         {
             "name": "Bruce Heller",
             "email": "bheller@bheller.com",
@@ -13,16 +17,16 @@
         }
     ],
     "require": {
-        "php": ">=5.3.0",
-        "fzaninotto/faker": "~1.4"
+        "php": ">=7.1",
+        "fakerphp/faker": "^1.10"
     },
     "require-dev": {
-        "phpunit/phpunit": "*",
-        "squizlabs/php_codesniffer": "2.*"
+        "phpunit/phpunit": "^9.4",
+        "squizlabs/php_codesniffer": "^3.5"
     },
     "autoload": {
         "psr-4": {
-            "bheller\\ImagesGenerator\\": "src"    
+            "maltyxx\\ImagesGenerator\\": "src"    
         }
     }
 }

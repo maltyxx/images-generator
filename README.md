@@ -1,6 +1,6 @@
 # images-generator
 
-Generator of placeholder-type images using **GD** for **[fzaninotto/Faker](https://github.com/fzaninotto/Faker)**
+Generator of placeholder-type images using **GD** for **[FakerPHP/Faker](https://github.com/FakerPHP/Faker)**
 
 ![Sample image](https://cloud.githubusercontent.com/assets/3966713/10469009/a205715e-7202-11e5-8603-cdcf2191c5e1.png)
 
@@ -8,9 +8,9 @@ Generator of placeholder-type images using **GD** for **[fzaninotto/Faker](https
 
 ## What is the goal of this project?
 
-[Faker](https://github.com/fzaninotto/Faker) is an amazing tool to quickly generate bunch of fake data that looks real. You can refer to its documentation to learn more about the powerful things it can do.
+[Faker](https://github.com/FakerPHP/Faker) is an amazing tool to quickly generate bunch of fake data that looks real. You can refer to its documentation to learn more about the powerful things it can do.
 
-One of the great option of [Faker](https://github.com/fzaninotto/Faker) is to be able to use [LoremPixel](http://lorempixel.com/) to get pretty pictures. It works great but has a few drawbacks:
+One of the great option of [Faker](https://github.com/FakerPHP/Faker) is to be able to use [LoremPixel](http://lorempixel.com/) to get pretty pictures. It works great but has a few drawbacks:
 
  - By using an external source of data, image generation needs to be done on a connected environment. It might be ok for most usage, but can be a problem if you need to generate data on the go or somewhere not connected to the internet.
  - Also, because of the same reason, getting a lot of pictures can take a very loooong time as it downloads every picture. If you want to fill your data with hundreds of pictures, it might be problematic.
@@ -34,20 +34,20 @@ Drawbacks of using **images-generator**:
 
 The easiest way is to use composer:
 
-    composer require bheller/images-generator
+    composer require --dev maltyxx/images-generator
 
 Or if you prefer by modifying your composer.json file, add this line to the "require" section:
 
-    "bheller/images-generator": "~1.0"
+    "maltyxx/images-generator": "~1.0"
 
 ## Usage
 
-Use the `ImagesGeneratorProvider` class in combinaison with [Faker](https://github.com/fzaninotto/Faker) to produce new images:
+Use the `ImagesGeneratorProvider` class in combinaison with [Faker](https://github.com/FakerPHP/Faker) to produce new images:
 
     <?php
     require __DIR__ .'/vendor/autoload.php';
     
-    use bheller\ImagesGenerator\ImagesGeneratorProvider;
+    use maltyxx\ImagesGenerator\ImagesGeneratorProvider;
 
     $faker = Faker\Factory::create();
     $faker->addProvider(new ImagesGeneratorProvider($faker));
@@ -84,7 +84,7 @@ Will generate a 640x480 blue png picture with the text 'Faker' in yellow inside 
 
 ![Sample image](https://cloud.githubusercontent.com/assets/3966713/10468752/12c05ce4-7201-11e5-8829-e58bb16e4262.png)
 
-More complex example using the power of [Faker](https://github.com/fzaninotto/Faker):
+More complex example using the power of [Faker](https://github.com/FakerPHP/Faker):
 
  - `$faker->imageGenerator('img', $faker->numberBetween(600, 800), $faker->numberBetween(400, 600), 'jpg', true, $faker->word, $faker->hexColor, $faker->hexColor)`
 Will return a jpeg of a random color picture with a width between 600 and 800 pixels, height between 400 and 600 pixels, with a random word written in a random color! This could generate pictures like theses:
@@ -93,7 +93,7 @@ Will return a jpeg of a random color picture with a width between 600 and 800 pi
 
 ## Seeding the generator
 
-The **images-generator** doesn't directly uses the seeding power of [Faker](https://github.com/fzaninotto/Faker). But you still can use it to generate the different parameters values. For example, this code will always output the same green picture with the same text (dolorum):
+The **images-generator** doesn't directly uses the seeding power of [Faker](https://github.com/FakerPHP/Faker). But you still can use it to generate the different parameters values. For example, this code will always output the same green picture with the same text (dolorum):
 
     $faker->seed(1234);
     $image = $faker->imageGenerator('img', $faker->numberBetween(600, 800), $faker->numberBetween(400, 600), 'jpg', true, $faker->word, $faker->hexColor, $faker->hexColor);
