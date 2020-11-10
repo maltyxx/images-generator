@@ -2,7 +2,7 @@
     "name": "maltyxx/images-generator",
     "description": "Generator of placeholder images for Faker",
     "homepage": "https://github.com/maltyxx/images-generator",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "keywords": ["images-generator", "imagesgenerator", "faker", "fixtures", "data"],
     "license": "MIT",
     "authors": [
